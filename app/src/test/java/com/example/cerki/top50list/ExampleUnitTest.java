@@ -1,5 +1,7 @@
 package com.example.cerki.top50list;
 
+import android.content.ContentValues;
+
 import org.junit.Test;
 
 import static org.junit.Assert.*;

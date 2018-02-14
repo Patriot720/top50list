@@ -3,4 +3,6 @@
     <string name="pp">pp</string>
     <string name="item_acc">%</string>
     <string name="item_rank">#</string>
+    <string name="hint">Search stuff</string>
+    <string name="label">mySearch</string>
 </resources>

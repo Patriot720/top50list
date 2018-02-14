@@ -2,16 +2,17 @@ package com.example.cerki.top50list;
 
 import android.content.ContentValues;
 
+import java.io.Serializable;
+
 /**
  * Created by cerki on 29-Oct-17.
  */
 
-public class Player {
+public class Player{
     String username;
     String rank;
     String accuracy;
     String pp;
-    public String BASE_URL = "https://osu.ppy.sh/";
     String url;
 
     public String getUrl() {

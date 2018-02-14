@@ -17,12 +17,15 @@ import java.util.List;
  */
 
 public class PlayerAdapter extends ArrayAdapter<Player> {
+    public int mLayout;
     public PlayerAdapter(Context context, int textViewResourceId) {
         super(context, textViewResourceId);
+        mLayout = textViewResourceId;
     }
 
     public PlayerAdapter(Context context, int resource, List<Player> items) {
         super(context, resource, items);
+        mLayout = resource;
     }
     @Override
     public View getView(int position, View convertView, ViewGroup parent){
@@ -30,7 +33,7 @@ public class PlayerAdapter extends ArrayAdapter<Player> {
     if(v == null){
         LayoutInflater vi ;
         vi = LayoutInflater.from(getContext());
-        v = vi.inflate(R.layout.list_item,null);
+        v = vi.inflate(mLayout,null);
     }
     Player p = getItem(position);
     if(p != null) {
@@ -54,7 +57,7 @@ public class PlayerAdapter extends ArrayAdapter<Player> {
         }
         if(pp != null) {
             pp.setText(p.pp);
-            rank_diff.setText(p.mDifferenceFromDbValues.getAsString("pp"));
+            pp_diff.setText(p.mDifferenceFromDbValues.getAsString("pp"));
         }
 
     }

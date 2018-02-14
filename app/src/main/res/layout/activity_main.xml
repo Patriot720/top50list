@@ -4,16 +4,31 @@
     xmlns:tools="http://schemas.android.com/tools"
     android:layout_width="match_parent"
     android:layout_height="match_parent"
+    android:orientation="vertical"
     tools:context="com.example.cerki.top50list.PlayersListActivity">
+
+    <EditText
+        android:id="@+id/editText2"
+        style="@android:style/Widget.DeviceDefault.EditText"
+        android:layout_width="match_parent"
+        android:layout_height="match_parent"
+        android:layout_weight="1"
+        android:ems="10"
+        android:inputType="textPersonName"
+        android:selectAllOnFocus="false"
+        android:singleLine="true"
+        android:text="Name"
+        android:textAlignment="center"
+        android:textSize="18sp" />
 
     <android.support.v4.widget.SwipeRefreshLayout
         android:id="@+id/list_refresh"
         android:layout_width="match_parent"
-        android:layout_height="match_parent">
-    <ListView
-        android:layout_width="match_parent"
-        android:layout_height="match_parent"
-        android:id="@+id/superview"
-        />
+        android:layout_height="wrap_content">
+
+        <ListView
+            android:id="@+id/superview"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content" />
     </android.support.v4.widget.SwipeRefreshLayout>
 </android.widget.LinearLayout>
